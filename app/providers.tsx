@@ -7,7 +7,7 @@ import { ReactNode } from 'react'; // Import ReactNode
 
 const config = getDefaultConfig({
   appName: 'Monad Domains App',
-  projectId: 'a9d4a1863982f15319445ba91664d6a2',
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID as string,
   chains: [mainnet, sepolia],
   transports: {
     [mainnet.id]: http(),
